@@ -123,10 +123,9 @@ button:after {
     100% { background-position: 0 0; }
 }
 
-@media screen and (max-width: 600px) {
-    button {
-    height: 5rem;
-    width: 13rem;
-    font-size: 2rem;
-}
-    }
+@media (max-width: 600px) {
+    button{
+        height: 5rem;
+        width: 13rem;
+        font-size: 2rem;
+    }}
