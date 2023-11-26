@@ -1,0 +1,124 @@
+body {
+    margin: 0; /* Define margens como 0 para maximizar o espaço disponível */
+    background: linear-gradient(-45deg, #ee5252, #dfdb0a, #82d523, #23d532);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%; }
+ 
+    50% {
+        background-position: 100% 50%; }
+ 
+    100% {
+        background-position: 0% 50%;}
+}
+
+.mae{
+height: 9rem;
+width: 100%;
+display: flex;
+flex-direction: row;
+background: #00ffd5;
+}
+.filha1{
+  height: 8.9rem;
+  width: 8em;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+img{
+    max-width: 100%; 
+    height: auto; 
+}
+
+.filha2 {
+    flex-grow: 1; 
+    max-width: 100%;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+
+}
+
+.filha2 h1{
+    max-width: 100%;
+    font-size: calc(1rem + 1vw);
+    margin-left:5px ;
+    text-align: center;
+    margin: 0px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+
+.BOTAO {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("mascotes.png");
+    animation: gradient 25s ease infinite;}
+
+button{
+    height: 10rem;
+    width: 26rem;
+    font-size: 4rem;
+}
+
+button {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #078d30;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+button::before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+button:active {
+    color: #000
+}
+
+button:active:after {
+    background: transparent;
+}
+
+button:hover:before {
+    opacity: 1;
+}
+
+button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
